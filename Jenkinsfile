@@ -6,8 +6,6 @@ pipeline {
       matrix {
         agent {
           dockerfile {
-            label "docker"
-
             additionalBuildArgs """
               --build-arg NODE_VERSION=$NODE
             """.stripIndent().trim()
